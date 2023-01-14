@@ -16,14 +16,14 @@ let tqto = `*▸ - - - —「 BIG THANKS TO 」— - - - ◂*
 *❉ Adiwajshing*
 *❉ Bochil Gaming*
 *❉ BrunoSobrino*
-*❉ Jarot Offc*
+*❉ Divan Xd*
 *❉ Kriz offc*
 *❉ Zivfur*
 *❉ Mursid*
 
 *▸ - - - —「 Script 」— - - - ◂*
 *❉ Kalo Mau Repload Kasih Base Ori Nya*
-https://github.com/JarotOffc?tab=repositories
+https://github.com/DivanXd?tab=repositories
 
 `
 conn.sendButtonDoc(m.chat, tqto, wm,'Thanks','Bilek', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
