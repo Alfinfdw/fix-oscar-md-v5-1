@@ -1,3 +1,4 @@
+//Made By Jarot Offc
 let levelling = require('../lib/levelling')
 let fs = require('fs')
 let path = require('path')
@@ -30,7 +31,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'image', 'anime', 'kerangajaib', 'quotes', 'rpg', 'grup', 'rpgabsen', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'vote', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'image', 'anime', 'kerangajaib', 'quotes', 'rpg', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'vote', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -40,7 +41,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'kerang': 'Kerang Ajaib',
     'quotes': 'Quotes',
     'rpg': 'Epic Rpg',
-    'rpgabsen': 'Rpg Absen',
     'group': 'Grup',
     'asupan': 'ASUPAN',
     'anime': 'Anime',
@@ -71,9 +71,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'rpg') tags = {
     'rpg': 'Epic Rpg'
-  }
-  if (teks == 'rpgabsen') tags = {
-    'rpg': 'Rpg Absen'
   }
   if (teks == 'kerangajaib') tags = {
     'kerang': 'Kerang Ajaib'
@@ -196,37 +193,48 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     })
    const sections = [
 {
+title: `┄┄┄┄┅┅| SUPPORT |┅┅┄┄┄┄`,
+	rows: [
+	    {title: `🔖 Sewa Bot`, rowId: ".sewa", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙻𝚒𝚜𝚝 𝙷𝚊𝚛𝚐𝚊 𝚂𝚎𝚠𝚊𝚋𝚘𝚝"},
+	    {title: `🌟 Upgrade Premium`, rowId: ".premium", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙻𝚒𝚜𝚝 𝙷𝚊𝚛𝚐𝚊 𝚄𝚙𝚐𝚛𝚊𝚍𝚎 𝙿𝚛𝚎𝚖𝚒𝚞𝚖"},
+	    {title: `💰 Donasi`, rowId: ".donasi", description: "𝚂𝚞𝚙𝚘𝚛𝚝 𝙱𝚘𝚝 𝙰𝚐𝚊𝚛 𝙷𝚒𝚍𝚞𝚙 𝚂𝚎𝚕𝚊𝚖𝚊 𝟸𝟺 𝙹𝚊𝚖"},
+	{title: `✨ Sosial Media Bot`, rowId: ".sosialmedia", description: '𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙱𝚘𝚝 𝙰𝚐𝚊𝚛 𝚂𝚎𝚖𝚊𝚗𝚐𝚊𝚝 𝚄𝚙𝚍𝚊𝚝𝚎'},
+	]
+	},{
 title: `⃟⟣⟚⟝ ⟡ List Menu ${namebot} ⟡ ⟞⟚⟢⃟`,
 rows: [
-{title: `𝚂𝚎𝚖𝚞𝚊 𝙿𝚎𝚛𝚒𝚗𝚝𝚊𝚑`, rowId: ".? all", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀᴍ Semua Perintah"},
-{title: `𝙼𝚎𝚗𝚞 𝙶𝚊𝚖𝚎 𝚁𝚙𝚐`, rowId: ".? rpg", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀᴍ Mᴇɴᴜ Rᴘɢ"},
-{title: `𝙼𝚎𝚗𝚞 𝙴𝚡𝚙`, rowId: ".? xp", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Exᴘ"},
-{title: `𝙼𝚎𝚗𝚞 𝙶𝚊𝚖𝚎`, rowId: ".? game", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Gᴇᴍᴇ"},
-{title: `𝙼𝚎𝚗𝚞 𝙵𝚞𝚗`, rowId: ".? fun", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Fᴜɴ"},
-{title: `𝙼𝚎𝚗𝚞 𝙺𝚎𝚛𝚊𝚗𝚐`, rowId: ".? kerangajaib", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Kᴇʀᴀɴɢ"},
-{title: `𝙼𝚎𝚗𝚞 𝚀𝚞𝚘𝚝𝚎𝚜`, rowId: ".? quotes", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Qᴜᴏᴛᴇs"},
-{title: `𝙼𝚎𝚗𝚞 𝙰𝚗𝚒𝚖𝚎`, rowId: ".? anime", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aɴɪᴍᴇ"},
-{title: `𝙼𝚎𝚗𝚞 𝙿𝚛𝚎𝚖𝚒𝚞𝚖`, rowId: ".? premium", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Pʀᴇᴍɪᴜᴍ"},
-{title: `𝙼𝚎𝚗𝚞 𝙰𝚗𝚘𝚗𝚢𝚖𝚘𝚞𝚜 𝙲𝚑𝚊𝚝𝚜`, rowId: ".? anonymous", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Aɴᴏɴʏᴍᴏᴜs Cʜᴀᴛs"},
-{title: `𝙼𝚎𝚗𝚞 𝙰𝚕-𝚀𝚞𝚛𝚊𝚗`, rowId: ".? quran", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aʟ-Qᴜʀᴀɴ"},
-{title: `𝙼𝚎𝚗𝚞 𝙸𝚗𝚝𝚎𝚛𝚗𝚎𝚝`, rowId: ".? internet", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Iɴᴛᴇʀɴᴇᴛ"},
-{title: `𝙼𝚎𝚗𝚞 𝙱𝚎𝚛𝚒𝚝𝚊`, rowId: ".? berita", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Bᴇʀɪᴛᴀ"},
-{title: `𝙼𝚎𝚗𝚞 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛`, rowId: ".? downloader", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Dᴏᴡɴʟᴏᴀᴅᴇʀ"},
-{title: `𝙼𝚎𝚗𝚞 𝚂𝚝𝚒𝚌𝚔𝚎𝚛`, rowId: ".? stiker", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Sᴛɪᴋᴇʀ"},
-{title: `𝙼𝚎𝚗𝚞 𝙽𝚞𝚕𝚒𝚜`, rowId: ".? nulis", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Nᴜʟɪs"},
-{title: `𝙼𝚎𝚗𝚞 𝙰𝚞𝚍𝚒𝚘`, rowId: ".? audio", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aᴜᴅɪᴏ"},
-{title: `𝙼𝚎𝚗𝚞 𝙶𝚛𝚘𝚞𝚙`, rowId: ".? group", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Gʀᴏᴜᴘ"},
-{title: `𝙼𝚎𝚗𝚞 𝙳𝚊𝚝𝚊𝚋𝚊𝚜𝚎`, rowId: ".? database", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Dᴀᴛᴀʙᴀsᴇ"},
-{title: `𝙼𝚎𝚗𝚞 𝚃𝚘𝚘𝚕𝚜`, rowId: ".? tools", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Tᴏᴏʟs"},
-{title: `𝙼𝚎𝚗𝚞 𝙸𝚗𝚏𝚘`, rowId: ".? info", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Iɴғᴏ"},
-{title: `𝙼𝚎𝚗𝚞 𝙾𝚠𝚗𝚎𝚛`, rowId: ".? owner", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Oᴡɴᴇʀ"},
+{title: `💬 Semua Perintah`, rowId: ".? all", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀᴍ Semua Perintah"},
+{title: `🌱 Menu Game Rpg`, rowId: ".? rpg", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀᴍ Mᴇɴᴜ Rᴘɢ"},
+{title: `✨ Menu Exp`, rowId: ".? xp", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Exᴘ"},
+{title: `🎮 Menu Game`, rowId: ".? game", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Gᴇᴍᴇ"},
+{title: `🧩 Menu Fun`, rowId: ".? fun", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Fᴜɴ"},
+{title: `🐚 Menu Kerang`, rowId: ".? kerangajaib", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Kᴇʀᴀɴɢ"},
+{title: `⛽ Menu Jadibot`, rowId: ".? quotes", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ 𝙹𝚊𝚍𝚒𝚋𝚘𝚝"},
+{title: `📑 Menu Quotes`, rowId: ".? quotes", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Qᴜᴏᴛᴇs"},
+{title: `⛩️ Menu Anime`, rowId: ".? anime", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aɴɪᴍᴇ"},
+{title: `🌟 Menu Premium `, rowId: ".? premium", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Pʀᴇᴍɪᴜᴍ"},
+{title: `🎭 Menu Anonymous Chats`, rowId: ".? anonymous", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Aɴᴏɴʏᴍᴏᴜs Cʜᴀᴛs"},
+{title: `📖 Menu Al-Quran`, rowId: ".? quran", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aʟ-Qᴜʀᴀɴ"},
+{title: `🌐 Menu Internet`, rowId: ".? internet", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Iɴᴛᴇʀɴᴇᴛ"},
+{title: `♻️ Menu Berita`, rowId: ".? berita", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Bᴇʀɪᴛᴀ"},
+{title: `📩 Menu Donwloader`, rowId: ".? downloader", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Dᴏᴡɴʟᴏᴀᴅᴇʀ"},
+{title: `🎨 Menu Sticker`, rowId: ".? stiker", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Sᴛɪᴋᴇʀ"},
+{title: `✏️ Menu Nulis`, rowId: ".? nulis", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Nᴜʟɪs"},
+{title: `🎧 Menu Audio`, rowId: ".? audio", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aᴜᴅɪᴏ"},
+{title: `🏢 Menu Group`, rowId: ".? group", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Gʀᴏᴜᴘ"},
+{title: `🗂️ Menu Database`, rowId: ".? database", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Dᴀᴛᴀʙᴀsᴇ"},
+{title: `🛠️ Menu Tools`, rowId: ".? tools", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Tᴏᴏʟs"},
+{title: `ℹ️️ Menu Info`, rowId: ".? info", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Iɴғᴏ"},
+{title: `👩‍💻 Menu Owner`, rowId: ".? owner", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Oᴡɴᴇʀ"},
 ]
 }, {
-title: `𝙱𝚊𝚗𝚝𝚞 𝚂𝚞𝚙𝚘𝚛𝚝 𝙼𝚎 ${namebot} `,
+title: `𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚜𝚒 𝙱𝚘𝚝 ${namebot} `,
 rows: [
-{title: `⟐ 𝙳𝚘𝚗𝚊𝚜𝚒 ⟐`, rowId: ".donasi", description: "𝙳𝚘𝚗𝚊𝚜𝚒 𝙰𝚐𝚊𝚛 𝚂𝚎𝚖𝚊𝚗𝚐𝚊𝚝 𝚄𝚙𝚍𝚊𝚝𝚎 𝙱𝚘𝚝:)"},
-{title: `⟐ 𝚂𝚎𝚠𝚊𝚋𝚘𝚝 ⟐`, rowId: ".sewa", description: "𝙼𝚊𝚞 𝙽𝚢𝚎𝚠𝚊?"},
-{title: `⟐ 𝙾𝚠𝚗𝚎𝚛 ⟐`, rowId: ".owner", description: "𝙽𝚘𝚖𝚎𝚛 𝙲𝚛𝚎𝚊𝚝𝚘𝚛 𝙱𝚘𝚝"},
+  {title: `📛 SPEED`, rowId: ".speed", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙺𝚎𝚌𝚎𝚙𝚊𝚝𝚊𝚗 𝙱𝚘𝚝"},
+	    {title: `💌 OWNER`, rowId: ".owner", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙽𝚘𝚖𝚎𝚛 𝙾𝚠𝚗𝚎𝚛 "},
+	    {title: `📔 SCRIPT`, rowId: ".sc", description: `𝚂𝚘𝚞𝚛𝚌𝚎 𝙲𝚘𝚍𝚎${namebot}`},
+	{title: `🗣️ REQUEST FITUR`, rowId: ".request", description: "𝚁𝚎𝚚𝚞𝚎𝚜𝚝 𝙵𝚒𝚝𝚞𝚛"},
+	{title: `👥 THANKS TO`, rowId: ".tqto", description: "𝚃𝚎𝚛𝚒𝚖𝚊 𝚔𝚊𝚜𝚒𝚑 𝙱𝚞𝚊𝚝 𝚈𝚊𝚗𝚐 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙱𝚘𝚝 𝙸𝚗𝚒"},
 ]}]
 let psan = 'bagaimana kabarmu?'
 let usrs = db.data.users[m.sender]
@@ -236,19 +244,19 @@ let tagnya = `@${m.sender.split`@`[0]}`
 let jarot = `┏─────────────────⬣
 ┆ 𝑯𝒂𝒊, ${tagnya} 👋
 ┗┬──────────────┈ ⳹
-┏┆♠︎ 𝙽𝚊𝚖𝚎 : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-┃┆♠︎ 𝚂𝚝𝚊𝚝𝚞𝚜 : ${m.sender.split`@`[0] == owner ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-┃┆♠︎𝙿𝚛𝚎𝚖𝚒𝚞𝚖 : ${global.prems ? 'Premium' : 'Free'}
-┃┆♠︎𝚁𝚘𝚕𝚎 : ${usrs.role}
-┃┆♠︎𝙻𝚒𝚖𝚒𝚝 : ${usrs.limit}
-┃┆♠︎𝙻𝚎𝚟𝚎𝚕 : ${usrs.limit}
+┏┆♠︎ 𝙽𝚊𝚖𝚎 : ${name}
+┃┆♠︎ 𝙻𝚒𝚖𝚒𝚝 : ${limit}
+┃┆♠︎ 𝙼𝚘𝚗𝚎𝚢 : ${money}
+┃┆♠︎ 𝙴𝚡𝚙 : ${exp}
+┃┆♠︎ 𝙻𝚎𝚟𝚎𝚕 : ${level}
+┃┆♠︎ 𝚁𝚘𝚕𝚎: ${role}
 ┗┬──────────────┈ ⳹
 ┏┤   𝐊𝐚𝐥𝐞𝐧𝐝𝐞𝐫
 ┆┗──────────────┈ ⳹
 ┆♠︎ 𝙷𝚊𝚛𝚒 : ${week} ${weton}
 ┆♠︎ 𝚄𝚙𝚝𝚒𝚖𝚎 : ${uptime}
 ┆♠︎ 𝚃𝚒𝚖𝚎 :  ${moment.tz('Asia/Jakarta').format('HH')} H${moment.tz('Asia/Jakarta').format('mm')} M${moment.tz('Asia/Jakarta').format('ss')} S
-┆♠︎ 𝚃𝚊𝚗𝚐𝚐𝚊𝚕: ${date}
+┆︎︎♠︎ 𝚃𝚊𝚗𝚐𝚐𝚊𝚕: ${date}
 ┗─────────────────⬣`
 let hariRayaramadan = new Date('April 21, 2023 23:59:59') 
      let sekarangg = new Date().getTime() 
